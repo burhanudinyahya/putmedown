@@ -7,12 +7,12 @@ import (
 	"os"
 	"time"
 
-	scaper "github.com/burhanudinyahya/putmedown/internal/scraper"
+	"github.com/burhanudinyahya/putmedown/internal/scraper"
 	"github.com/burhanudinyahya/putmedown/internal/utils"
 )
 
 func TiktokDownloader(url string) error {
-	videoSrc, cookie, err := scaper.TiktokScraper(url)
+	videoSrc, cookie, err := scraper.TiktokScraper(url)
 	if err != nil {
 		return fmt.Errorf("failed to scrap the video: %w", err)
 	}
